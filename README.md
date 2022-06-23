@@ -1,2 +1,2 @@
-# DCF
- DCF stand for Data, Cleaner, Figure object oriented based on pandas and matplot libraries.
+# clean-panda
+ Clean panda is an object-oriented program which allows you to clean the dataframe in an intuitive way.
