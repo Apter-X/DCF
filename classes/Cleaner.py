@@ -1,9 +1,7 @@
 import operator
 import unicodedata
 
-import numpy as np
-
-from classes.Data import Data
+from classes.Data import Data, np
 
 
 class Cleaner:

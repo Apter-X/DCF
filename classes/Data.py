@@ -1,5 +1,5 @@
 import numpy as np
-from pandas import pd
+import pandas as pd
 
 
 class Data:
