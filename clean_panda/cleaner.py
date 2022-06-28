@@ -1,7 +1,7 @@
 import operator
 import unicodedata
 
-from classes.Data import Data, np
+from clean_panda.data import Data, np
 
 
 class Cleaner:
