@@ -5,11 +5,11 @@ from clean_panda.data import Data, np
 
 
 class Cleaner:
-    def __init__(self, data=None):
+    def __init__(self, data=None, columns=None):
         if data:
             self.data = data
         else:
-            self.data = Data()
+            self.data = Data(columns=columns)
 
     def normalize_text(self, arr_labels, unicode="NFC"):
         """ Normalize textual column """

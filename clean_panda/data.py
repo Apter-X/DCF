@@ -3,8 +3,13 @@ import pandas as pd
 
 
 class Data:
-    def __init__(self):
-        self.frame = pd.DataFrame
+    def __init__(self, columns=None):
+        self.frame = pd.DataFrame(columns=columns)
+
+    def get_fetch(self, fetched_data):
+        """ Get dataframe from a database """
+        for row in fetched_data:
+            self.frame.loc[len(self.frame.index)] = row
 
     def import_csv(self, path, low_memory=False):
         """ Set dataframe from a csv file """
