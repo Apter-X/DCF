@@ -29,7 +29,7 @@ class Data:
             n -= 1
         self.frame = pd.concat(duplicate)
 
-    def concat_data(self, arr_data):
+    def append_data(self, arr_data):
         """ Concatenate the existing data with the array of dataframe """
         arr_data.append(self.frame)
         self.frame = pd.concat(arr_data)
