@@ -109,12 +109,11 @@ class Cleaner:
                 self.data.frame.loc[(self.data.frame[label_1] == old), label_1] = new
         self.replace_values(['nan'], np.nan)  # reestablish stringified nan to <null>
 
-    def remove_by_number(self, arr_label, min_model):
-        model_freq = self.data.frame.groupby(arr_label).size().reset_index(name='nb')
-        self.data.frame = self.data.frame.merge(model_freq, on=arr_label)
-        self.data.frame = self.data.frame[self.data.frame['nb'] > min_model]
-        self.data.frame = self.data.frame.drop(['nb'], axis=1)
-
     def get_cluster_by_label(self, arr_label):
         cluster = self.data.frame.groupby(arr_label).size().reset_index(name='nb')
         return self.data.frame.merge(cluster, on=arr_label)
+
+    def remove_by_cluster(self, arr_label, min_model):
+        self.data.frame = self.get_cluster_by_label(arr_label)
+        self.data.frame = self.data.frame[self.data.frame['nb'] > min_model]
+        self.data.frame = self.data.frame.drop(['nb'], axis=1)
