@@ -7,5 +7,8 @@ setup(
     description='Data cleaner based on pandas',
     author='Iliass Raihani',
     license='MIT',
-    install_requires=['pandas', 'numpy']
+    install_requires=['pandas', 'numpy'],
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest==4.4.1'],
+    test_suite='tests',
 )
