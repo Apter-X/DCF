@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 """
-    clean-panda
+    Clean Panda
     ~~~~~
     Simple Oriented Object Program Data Cleaner
     It uses pandas.
