@@ -75,8 +75,9 @@ class Cleaner:
     def keep_by_condition(self, condition):
         self.data.frame = self.data.frame[condition]
 
-    def keep_what_is_in(self, arr_values, on):
-        self.data.frame = self.data.frame[self.data.frame[on].isin(arr_values)]
+    def keep_what_is_in(self, arr_values, arr_label):
+        for label in arr_label:
+            self.data.frame = self.data.frame[self.data.frame[label].isin(arr_values)]
 
     def round_data(self, arr_labels, by=None):
         for n in arr_labels:
