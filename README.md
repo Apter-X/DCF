@@ -15,3 +15,7 @@ $ pip install clean-panda
 0 /TODO
 
 ```
+
+## License
+
+MIT License
