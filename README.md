@@ -40,45 +40,45 @@ print(clean.data.frame)
 
 ```
 
-## Structure
+## Methods
 
-├── **cleaner**
-    ├── normalize_text
-    ├── remove_features
-    ├── keep_features
-    ├── remove_duplicates
-    ├── remove_na
-    ├── replace_str
-    ├── replace_values
-    ├── rename_column
-    ├── sort_data
-    ├── convert
-    ├── apply_row_rule
-    ├── apply_rule_out
-    ├── apply_rule
-    ├── merge_data
-    ├── remove_by_condition
-    ├── keep_by_condition
-    ├── keep_what_is_in
-    ├── round_data
-    ├── operator_feat
-    ├── map_data
-    ├── get_cluster_by_label
-    ├── remove_by_cluster
-    ├── **data**
-        ├── get_fetch
-        ├── import_csv
-        ├── import_json
-        ├── duplicate_data
-        ├── append_data
-        ├── export_to_csv
-        ├── export_to_json
-        ├── export_to_xlsx
-        ├── get_value
-        ├── get_rows
-        ├── get_filter_by_values
-        ├── **frame** 
-        │   ├── pd_methods
+    ├── Cleaner
+        ├── normalize_text
+        ├── remove_features
+        ├── keep_features
+        ├── remove_duplicates
+        ├── remove_na
+        ├── replace_str
+        ├── replace_values
+        ├── rename_column
+        ├── sort_data
+        ├── convert
+        ├── apply_row_rule
+        ├── apply_rule_out
+        ├── apply_rule
+        ├── merge_data
+        ├── remove_by_condition
+        ├── keep_by_condition
+        ├── keep_what_is_in
+        ├── round_data
+        ├── operator_feat
+        ├── map_data
+        ├── get_cluster_by_label
+        ├── remove_by_cluster
+        ├── Data
+            ├── get_fetch
+            ├── import_csv
+            ├── import_json
+            ├── duplicate_data
+            ├── append_data
+            ├── export_to_csv
+            ├── export_to_json
+            ├── export_to_xlsx
+            ├── get_value
+            ├── get_rows
+            ├── get_filter_by_values
+            ├── Frame //pandas methods
+            │   ├── ...
     
 ## License
 
