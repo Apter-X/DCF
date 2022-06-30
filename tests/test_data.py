@@ -25,3 +25,15 @@ def test_append_data():
 def test_get_value():
     data = Data(dataframe=df)
     assert data.get_value('age', data.frame.name == 'Jane') == 28
+
+
+def test_get_rows():
+    data = Data(dataframe=df)
+    rows = data.get_rows(data.frame.name == 'Kate')
+    assert rows['age'].values[0] == data.frame.iloc[6]['age']
+
+
+def test_get_filter_by_values():
+    data = Data(dataframe=df)
+    values = data.get_filter_by_values(['male'])
+    assert values.values[3][0] == 'Tom'
