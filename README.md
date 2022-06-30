@@ -54,10 +54,10 @@ print(clean.data.frame)
 
 ```shell
      name  age     sex
-0  Olivia   32  female
-2    Alex   45    male
-3     Jon   35    male
-6    Kate   55  female
+0  OLIVIA   32  FEMALE
+2    ALEX   45    MALE
+3     JON   35    MALE
+6    KATE   55  FEMALE
 ```
 
 ## Interface
