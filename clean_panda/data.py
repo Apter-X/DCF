@@ -52,7 +52,7 @@ class Data:
         value = self.frame[of][row_index]
         return value
 
-    def get_row(self, where):
+    def get_rows(self, where):
         row = self.frame.loc[where]
         return row
 
