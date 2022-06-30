@@ -3,8 +3,8 @@ import pandas as pd
 
 
 class Data:
-    def __init__(self, columns=None):
-        self.frame = pd.DataFrame(columns=columns)
+    def __init__(self, dataframe=None, columns=None):
+        self.frame = pd.DataFrame(dataframe, columns=columns)
 
     def get_fetch(self, fetched_data):
         """ Get dataframe from a database """
@@ -18,7 +18,7 @@ class Data:
 
     def import_json(self, path):
         """ Set dataframe from a json file """
-        self.frame = pd.read_json(path,)
+        self.frame = pd.read_json(path, )
         return self.frame
 
     def duplicate_data(self, n):
@@ -52,6 +52,10 @@ class Data:
         value = self.frame[of][row_index]
         return value
 
-    def filter(self, arr_value):
-        filter_result = self.frame.loc[np.where(self.frame.iloc[:, 1:].isin(arr_value) is True)[0]]
+    def get_row(self, where):
+        row = self.frame.loc[where]
+        return row
+
+    def get_filter_by_values(self, arr_value):
+        filter_result = self.frame.loc[np.where(self.frame.iloc[:, 1:].isin(arr_value) == True)[0]]
         return filter_result
