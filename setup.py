@@ -9,6 +9,6 @@ setup(
     license='MIT',
     install_requires=['pandas', 'numpy'],
     setup_requires=['pytest-runner'],
-    tests_require=['pytest==4.4.1'],
+    tests_require=['pytest==7.1.2'],
     test_suite='tests',
 )
