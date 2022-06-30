@@ -10,37 +10,57 @@ $ pip install clean-panda
 ## Basic Usage
 
 ```python
+from clean_panda import Cleaner
+
 df = {'name': ['Olivia', 'Dean', 'Alex', 'Jon', 'Tom', 'Jane', 'Kate'],
       'age': [32, 23, 45, 35, 20, 28, 55],
       'sex': ['female', 'male', 'male', 'male', 'male', 'female', 'female']}
 
 clean = Cleaner(df)
 print(clean.data.frame)
-
-0         name  age     sex
-1    0  Olivia   32  female
-2    1    Dean   23    male
-3    2    Alex   45    male
-4    3     Jon   35    male
-5    4     Tom   20    male
-6    5    Jane   28  female
-7    6    Kate   55  female
-
-clean.normalize_text(['name', 'sex'])
-print(clean.data.frame)
-
-0         name  age     sex
-1   0  OLIVIA   32  FEMALE
-2   1    DEAN   23    MALE
-3   2    ALEX   45    MALE
-4   3     JON   35    MALE
-5   4     TOM   20    MALE
-6   5    JANE   28  FEMALE
-7   6    KATE   55  FEMALE
-
 ```
 
-## Methods
+```shell
+     name  age     sex
+0  Olivia   32  female
+1    Dean   23    male
+2    Alex   45    male
+3     Jon   35    male
+4     Tom   20    male
+5    Jane   28  female
+6    Kate   55  female
+```
+
+```python
+clean.normalize_text(['name', 'sex'])
+print(clean.data.frame)
+```
+
+```shell
+     name  age     sex
+0  OLIVIA   32  FEMALE
+1    DEAN   23    MALE
+2    ALEX   45    MALE
+3     JON   35    MALE
+4     TOM   20    MALE
+5    JANE   28  FEMALE
+6    KATE   55  FEMALE
+```
+
+```python
+clean.keep_by_condition(clean.data.frame.age > 30)
+print(clean.data.frame)
+```
+
+```shell
+     name  age     sex
+0  Olivia   32  female
+2    Alex   45    male
+3     Jon   35    male
+6    Kate   55  female
+```
+
+## Interface
 
     ├── Cleaner
         ├── normalize_text
